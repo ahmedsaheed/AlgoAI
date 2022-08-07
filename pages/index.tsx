@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
-import Forms from "../components/Form";
+import Forms from "../components/form";
 import Head from "next/head";
-import Answerbox from "../components/answerbox";
-import { placeholder } from "../components/placeholder";
 const Home: NextPage = () => {
   return (
   <>
