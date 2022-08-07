@@ -2,19 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-/* background-color: black;
-color: white; */
+color: rgb(120, 132, 146);
+height: 100%;
+width: 100%;
+}
+h2{
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'EB Garamond', serif;
+  text-decoration: none !important;
+}
+.desc{
+  font-family: monospace;
+  font-size: 16px;
 }
 
-.center{
-  position: absolute;
+
+.init{
+  padding: 24px;
+  width: 100%;
+  height: 100%;
+}
+.intro{
+  margin-bottom: 24px;
+}
+
+.form{
+  width: 100%;
+  max-width: 700px;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
 }
+
