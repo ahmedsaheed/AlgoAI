@@ -1,10 +1,8 @@
 import React from 'react';
 
-const answerbox = () => {
+const answerbox = (answer) => {
     return(
-        <div className="border-8" style={{color: "red"}}>
-
-        </div>
+        <div className="bg-gray-100 border-t-4 border-gray-400 rounded-b text-gray-900 px-4 py-3 shadow-md mt-6"><p>{answer}</p></div>
     )
 } 
 

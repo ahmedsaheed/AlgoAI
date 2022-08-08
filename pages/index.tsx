@@ -1,9 +1,7 @@
 import type { NextPage } from "next";
 import Forms from "../components/form";
 import Head from "next/head";
-import { worker } from "../components/worker";
 const Home: NextPage = () => {
-
   return (
   <>
       <Head>

@@ -44,29 +44,44 @@ h2{
   transform: translate(-50%, -50%);
 
 }
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
 
-/* .button {
-  height: 40px;
-  display: inline-block;
-  padding: 9px 15px;
-  background-color: grey;
-  color: white;
-  border: 0;
-  line-height: inherit;
-  text-decoration: none;
-  cursor: pointer;
-} */
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
 
-/* .input {
+  border-radius: 100%;
   display: inline-block;
-  width: 100%;
-  max-width: 700px;
-  margin-bottom: 0px;
-  padding: 9px 12px;
-  color: #333333;
-  vertical-align: middle;
-  background-color: #ffffff;
-  border: 5px solid #cccccc;
-  margin: 0;
-  line-height: 1.42857143;
-} */
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
