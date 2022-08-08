@@ -1,5 +1,4 @@
 const { Configuration, OpenAIApi } = require("openai");
-import Loader from "./spinner"
 
 export default async function worker(question){
   let result = "";
@@ -23,7 +22,6 @@ const completion = await openai.createCompletion({
 });
 if (completion.data.choices.length !== 0) {
     completion.data.choices.forEach(elements => result+=elements.text);
-    console.log(result);
     isMounted = true;
 }
 
