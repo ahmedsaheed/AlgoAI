@@ -100,6 +100,9 @@ main{
   white-space: pre-wrap;
   font-family: "Stylish", system-ui, helvetica, sans-serif;
 }
+input{
+  font-family: "Stylish", system-ui, helvetica, sans-serif;
+}
 
 footer{
   position: absolute;
