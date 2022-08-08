@@ -67,6 +67,7 @@ export default function InitialForm () {
             placeholder= {placeholder()}
             onChange={handleChange}
             value={values.question}
+            autocomplete="off"
             className=" block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-100  focus:bg-opacity-50 focus:backdrop-blur-lfocus:border-gray-500"
           />
           <button type="submit">Submit</button>
