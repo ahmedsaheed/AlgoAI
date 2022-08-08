@@ -4,6 +4,9 @@ import { Formik , Field} from "formik";
 import { placeholder } from "./placeholder";
 import worker from "./worker"; 
 import Loaders from "./spinner";
+import hljs from 'highlight.js';
+import "highlight.js/styles/atom-one-dark-reasonable.css"
+
 
 // const ValidationSchema = Yup.object().shape({
 //   question: Yup.string()
@@ -19,6 +22,7 @@ import Loaders from "./spinner";
 
 export default function InitialForm () {
   let result = ""
+  let highlighter = ""
   let isMounted = false;
   const [formValues, setFormValue] = useState({
     question: ""
@@ -39,7 +43,6 @@ export default function InitialForm () {
           isMounted = true;
           setPayLoad(result);
         }
-        // setPayLoad(result);
         setSubmitting(true);
         setTimeout(() => {
           resetForm();
@@ -69,15 +72,10 @@ export default function InitialForm () {
             className=" block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           />
           <button type="submit">Submit</button>
-          <div className="bg-gray-100 border-t-4 border-gray-400 rounded-b text-gray-900 px-4 py-3 shadow-md mt-6">
-         {/* {isMounted ? <pre><code>{payLoad}</code></pre> : <Loaders/>} */}
-           <pre><code>{payLoad}</code></pre>
-          </div>
+          <pre className="bg-gray-100 border-t-4 border-gray-400 rounded-b px-4 py-3 shadow-md mt-6">
+          <code  dangerouslySetInnerHTML = {{__html: hljs.highlightAuto(payLoad).value}} />
 
-         
-
-  
-
+          </pre>
         </form>
 
 

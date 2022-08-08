@@ -9,6 +9,7 @@ export default async function worker(question){
 const configuration = new Configuration({
 
   apiKey: process.env.OPENAI,
+
 });
 const openai = new OpenAIApi(configuration);
 

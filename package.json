@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "formik": "^2.2.9",
+    "highlight.js": "^11.6.0",
     "next": "12.2.4",
     "openai": "^3.0.0",
     "react": "18.2.0",
