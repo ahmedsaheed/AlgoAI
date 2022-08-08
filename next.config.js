@@ -5,3 +5,8 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+module.exports = {
+  env: {
+    OPENAI: process.env.OPENAI,
+  },
+};
