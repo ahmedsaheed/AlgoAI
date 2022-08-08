@@ -16,8 +16,8 @@ const Home: NextPage = () => {
             <div className="gap"></div>
             <div className="form" style={{ padding: "1rem" }}>
               <div className="intro">
-                <div className="MuiBox-root css-10fo8i1">
-                  <h2 style={{fontFamily: "Stylish"}}>Ask an algorithmic question</h2>
+                <div>
+                  <h2>Ask an algorithmic question</h2>
                 </div>
                 <div className="desc">
                   AlgoAI uses gpt3 codegen model to resolve your question.

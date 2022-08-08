@@ -1,34 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Spectral:wght@200&family=Stylish&family=Yomogi&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Stylish&display=swap');
-html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: rgb(50, 54, 59);
--webkit-font-smoothing: antialiased;
-background: rgb(238,174,202);
-
-background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);}
-h2 {
-  font-size: 32px;
-  font-weight: 700;
-  font-family: "Stylish", serif;
-  /* text-decoration: none !important; */
+  font-family: 100%/1.5 "Spectral", system-ui, helvetica, sans-serif;  color: rgb(50, 54, 59);
+  -webkit-font-smoothing: antialiased;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
+
+
 .desc {
-  font-family: monospace;
+  font-family: "Spectral";
   font-size: 16px;
 }
 .first{
   position: relative;
   min-height: 100%;
 }
-
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+  font-family: "Stylish", system-ui, helvetica, sans-serif;
+}
 .init {
   padding: 24px;
   width: 100%;
@@ -48,7 +46,7 @@ main{
   margin-right: auto;
 }
 .spinner {
-  margin: 100px auto 0;
+  margin: 20px auto 0;
   width: 70px;
   text-align: center;
 }
@@ -112,14 +110,10 @@ footer{
   text-align: center;
 }
 
-.styles_line__J4Q97 {
-  height: 20px;
-  width: 180px;
-  margin: 24px auto;
-  background-image: url(https://cmdk.paco.me/line.svg);
-  filter: invert(1);
-  -webkit-mask-image: linear-gradient(90deg,transparent,#fff 4rem,#fff calc(100% - 4rem),transparent);
-  mask-image: linear-gradient(90deg,transparent,#fff 4rem,#fff calc(100% - 4rem),transparent);
+footer a:hover{
+  text-decoration: none;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #ededed;
 }
-
-

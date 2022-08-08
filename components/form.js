@@ -67,7 +67,7 @@ export default function InitialForm () {
             placeholder= {placeholder()}
             onChange={handleChange}
             value={values.question}
-            className=" block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-100 focus:border-gray-500"
+            className=" block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-100  focus:bg-opacity-50 focus:backdrop-blur-lfocus:border-gray-500"
           />
           <button type="submit">Submit</button>
           <pre style={{display: isEntered ? "block" : "none"}} className="bg-gray-100 border-t-4 border-gray-400 bg-opacity-50 backdrop-blur-l  rounded-md px-4 py-3 shadow-md mt-6">
