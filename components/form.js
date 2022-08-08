@@ -23,9 +23,11 @@ export default function InitialForm () {
   const [formValues, setFormValue] = useState({
     question: ""
   });
+  const [payLoad, setPayLoad] = useState("");
 
 
   return (
+    
     <Formik
    
       initialValues={{ question: "" }}
@@ -35,7 +37,9 @@ export default function InitialForm () {
         result = await worker(values.question);
         if (result !== null){
           isMounted = true;
+          setPayLoad(result);
         }
+        // setPayLoad(result);
         setSubmitting(true);
         setTimeout(() => {
           resetForm();
@@ -66,7 +70,8 @@ export default function InitialForm () {
           />
           <button type="submit">Submit</button>
           <div className="bg-gray-100 border-t-4 border-gray-400 rounded-b text-gray-900 px-4 py-3 shadow-md mt-6">
-           {/* {isMounted ? <p>{result}</p> : <Loaders/>} */}
+         {/* {isMounted ? <pre><code>{payLoad}</code></pre> : <Loaders/>} */}
+           <pre><code>{payLoad}</code></pre>
           </div>
 
          

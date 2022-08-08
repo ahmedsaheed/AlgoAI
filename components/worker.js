@@ -5,10 +5,10 @@ import Loader from "./spinner"
 
 export default async function worker(question){
   let result = "";
+  let isMounted = false;
 const configuration = new Configuration({
 
-//   apiKey: process.env.OPENAI,
-
+  apiKey: process.env.OPENAI,
 });
 const openai = new OpenAIApi(configuration);
 
