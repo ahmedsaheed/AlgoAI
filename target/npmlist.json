@@ -1,0 +1,13 @@
+{
+  "version": "0.1.0",
+  "name": "algo-ai",
+  "dependencies": {
+    "formik": { "version": "2.2.9" },
+    "highlight.js": { "version": "11.6.0" },
+    "next": { "version": "12.2.4" },
+    "openai": { "version": "3.0.0" },
+    "react-dom": { "version": "18.2.0" },
+    "react": { "version": "18.2.0" },
+    "yup": { "version": "0.32.11" }
+  }
+}

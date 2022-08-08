@@ -1,35 +1,27 @@
 const { Configuration, OpenAIApi } = require("openai");
 
-export default async function worker(question){
+export default async function worker(question) {
   let result = "";
   let isMounted = false;
-  const token = process.env.OPENAI
-const configuration = new Configuration({
+  const token = process.env.OPENAI;
+  const configuration = new Configuration({
+    apiKey: token,
+  });
+  const openai = new OpenAIApi(configuration);
 
-  apiKey: token,
-
-});
-const openai = new OpenAIApi(configuration);
-
-const completion = await openai.createCompletion({
-  model: "text-davinci-002",
-  prompt: question,
-  temperature: 0,
-  max_tokens: 450,
-  top_p: 1,
-  frequency_penalty: 0.2,
-  presence_penalty: 0,
-});
-if (completion.data.choices.length !== 0) {
-    completion.data.choices.forEach(elements => result+=elements.text);
+  const completion = await openai.createCompletion({
+    model: "text-davinci-002",
+    prompt: question,
+    temperature: 0,
+    max_tokens: 450,
+    top_p: 1,
+    frequency_penalty: 0.2,
+    presence_penalty: 0,
+  });
+  if (completion.data.choices.length !== 0) {
+    completion.data.choices.forEach((elements) => (result += elements.text));
     isMounted = true;
+  }
+
+  return isMounted ? result : null;
 }
-
-
-return(
-    isMounted ? result : null
-)
-}
-
-
-  

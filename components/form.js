@@ -71,7 +71,7 @@ export default function InitialForm () {
           />
           <button type="submit">Submit</button>
           <pre style={{display: isEntered ? "block" : "none"}} className="bg-gray-100 border-t-4 border-gray-400 rounded-b px-4 py-3 shadow-md mt-6">
-            {isLoading ? <center><Loaders/></center> : <div dangerouslySetInnerHTML={{__html: hljs.highlightAuto(payLoad).value}} />}
+            {isLoading ? <center><Loaders/></center> : <div className="answerbox" dangerouslySetInnerHTML={{__html: hljs.highlightAuto(payLoad).value}} />}
           </pre>
         </form>
 
