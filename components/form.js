@@ -5,7 +5,7 @@ import { placeholder } from "./placeholder";
 import worker from "./worker"; 
 import Loaders from "./spinner";
 import hljs from 'highlight.js';
-import "highlight.js/styles/atom-one-dark-reasonable.css"
+import "highlight.js/styles/xcode.css"
 
 
 // const ValidationSchema = Yup.object().shape({
@@ -67,10 +67,11 @@ export default function InitialForm () {
             placeholder= {placeholder()}
             onChange={handleChange}
             value={values.question}
-            className=" block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className=" block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-100 focus:border-gray-500"
           />
           <button type="submit">Submit</button>
-          <pre style={{display: isEntered ? "block" : "none"}} className="bg-gray-100 border-t-4 border-gray-400 rounded-b px-4 py-3 shadow-md mt-6">
+          <div style={{display: isEntered ? "block" : "none"}} aria-hidden="true" class="styles_line__J4Q97"></div>
+          <pre style={{display: isEntered ? "block" : "none"}} className="bg-gray-100 border-t-4 border-gray-400 bg-opacity-50 backdrop-blur-l  rounded-md px-4 py-3 shadow-md mt-6">
             {isLoading ? <center><Loaders/></center> : <div className="answerbox" dangerouslySetInnerHTML={{__html: hljs.highlightAuto(payLoad).value}} />}
           </pre>
         </form>
