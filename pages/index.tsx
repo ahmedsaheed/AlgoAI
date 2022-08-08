@@ -28,6 +28,7 @@ const Home: NextPage = () => {
             <div className="lowerSpace"></div>
           </div>
         </main>
+        <footer>Made with love by <a className="underline" href="http://github.com/ahmedsaheed">Ahmed</a> using <a className="underline" href="https://beta.openai.com/">gpt3</a><br/> Edit on <a className="underline" href="https://github.com/ahmedsaheed/AlgoAI">GitHub</a></footer>
       </div>
     </>
   );
