@@ -1,12 +1,10 @@
 const { Configuration, OpenAIApi } = require("openai");
-import React, {useState, useEffect} from "react"
 import Loader from "./spinner"
 
 
 
 export default async function worker(question){
   let result = "";
-  const[payLoad, setPayload] = useState(null);
 const configuration = new Configuration({
 
 //   apiKey: process.env.OPENAI,
